@@ -13,6 +13,6 @@ class UtilTest extends TestCase
 
     public function testMyIntentionalMistake()
     {
-        $this->assertEquals(5, 2 + 2);
+        $this->assertEquals(5, 2 + 3);
     }
 }
