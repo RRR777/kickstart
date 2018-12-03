@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Tests;
+namespace App\Services\Tests;
 
-use App\Services\NfqTeams;
 use App\Services\TeamsInterface;
 use App\Services\WorkLoadCounter;
 use PHPUnit\Framework\MockObject\MockObject;
