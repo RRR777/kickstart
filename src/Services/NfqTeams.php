@@ -5,6 +5,7 @@ namespace App\Services;
 class NfqTeams implements TeamsInterface
 {
     private $data = [];
+
     /**
      * NfqKaunasTeams constructor.
      *
@@ -14,6 +15,7 @@ class NfqTeams implements TeamsInterface
     {
         $this->data = $data;
     }
+
     public function getTeamByMember(string $name): ?string
     {
         foreach ($this->data as $teamName => $teamData) {
