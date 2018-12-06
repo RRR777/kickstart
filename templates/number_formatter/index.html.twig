@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Number Formatter{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper {
+            margin: 1em auto;
+            max-width: 800px;
+            width: 95%;
+            font: 18px/1.5 sans-serif;
+        }
+
+        .example-wrapper code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+        }
+    </style>
+
+    <div class="example-wrapper">
+        <h1>Skaičių Formato Keitimas</h1>
+
+        <form action="{{ path('number_formatter') }}" method="POST">
+            <label for="number">Įveskite skaičių:</label>
+            <input type="number" step="any" name="number" id="number">
+            <br><br>
+            <input type="submit" value="Keisti Formatą">
+        </form>
+        <br>
+        <br>
+
+        <h1 class="display-4">Jūs įvedėte skaičių {{ number }}</h1>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="jumbotron jumbotron-fluid text-center">
+                        <h3 class="display-4">{{ moneyFormattedNumberEur }}</h3>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="jumbotron jumbotron-fluid text-center">
+                        <h3 class="display-4">{{ moneyFormattedNumberUsd }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
